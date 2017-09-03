@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>The best techinical task I've completed today!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <div id="terribleWarning">For best results view this page with a window size of at least 540px; 850px is even better</div>
+        <div id="bingo">
+
+        </div>
+        <form id="controls">
+            <div>
+                <label for="speed">Speed of game (milliseconds)</label>
+                <input id="speed" name="speed" type="text" value="1000">
+            </div>
+            <div>
+                <button onclick="return pauseGame()" id="pause">Pause game</button>
+                <button onclick="return resumeGame()" disabled="disabled" id="resume">Resume game with set speed</button>
+            </div>
+            <div>
+                <button onclick="return newNumber()" disabled="disabled" id="oneStep">Complete one game step</button>
+                <button onclick="return gameSetup()">Restart game</button>
+            </div>
+        </form> 
+        <div class="overlay" hidden="hidden">&nbsp;</div>
+        <section class="modal" hidden="hidden" aria-hidden="true" role="alertdialog">
+            <h2>A win</h2>
+            <div class="imageWrapper">
+                <img src="images/congratulations.gif" alt="" />
+            </div>
+            <button class="button">Close overlay and restart</button>
+        </section>
+        <script src="scripts/main.js"> </script>
+    </body>
+</html>
